@@ -55,7 +55,7 @@ self.addEventListener("install", function (evt) {
 
   self.addEventListener("fetch", function(evt) {
     // cache successful requests to the API
-    if (evt.request.url.includes("localhost:3000")) {
+    if (evt.request.url.includes("/all")) {
       console.log('[Service Worker] Fetch (data)', evt.request.url);
   
       evt.respondWith(
